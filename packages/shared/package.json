@@ -1,0 +1,10 @@
+{
+  "name": "@andavalle/shared",
+  "private": true,
+  "version": "0.2.0",
+  "type": "module",
+  "exports": { ".": "./src/index.ts" },
+  "scripts": { "check": "tsc --noEmit", "test": "node --test --experimental-strip-types tests/*.test.mjs" },
+  "dependencies": { "@supabase/supabase-js": "2.76.1" },
+  "devDependencies": { "typescript": "5.9.3" }
+}

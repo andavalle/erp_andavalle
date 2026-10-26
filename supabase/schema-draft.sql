@@ -1,5 +1,7 @@
--- Borrador de arquitectura: no ejecutar todavía en producción.
--- SS/SE son solicitudes editables; HS/HE son documentos confirmados que generan movimientos.
+-- ARCHIVO HISTÓRICO. No ejecutar.
+-- La definición vigente está versionada en supabase/migrations/ y los datos de
+-- desarrollo reproducibles están en supabase/seed.sql.
+-- Este borrador se conserva únicamente como referencia del diseño inicial.
 
 create type public.member_role as enum ('admin', 'commercial', 'warehouse', 'logistics');
 create type public.request_type as enum ('SS', 'SE');

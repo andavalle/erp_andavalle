@@ -1,0 +1,11 @@
+project_id = "andavalle"
+
+[db.seed]
+enabled = true
+sql_paths = ["./seed.sql"]
+
+[functions.submit-lead]
+verify_jwt = false
+
+[functions.invite-user]
+verify_jwt = true

@@ -1,5 +1,10 @@
 node_modules/
 dist/
+apps/*/dist/
+.supabase/
+supabase/.temp/
+supabase/.branches/
+coverage/
 .env
 .env.local
 *.local

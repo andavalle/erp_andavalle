@@ -1,26 +1,27 @@
 {
-  "name": "andavalle-operaciones",
+  "name": "andavalle-platform",
   "private": true,
-  "version": "0.1.0",
-  "type": "module",
+  "version": "0.2.0",
+  "workspaces": ["apps/*", "packages/*"],
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "check": "tsc --noEmit"
+    "dev:site": "npm run dev --workspace @andavalle/site",
+    "dev:erp": "npm run dev --workspace @andavalle/erp",
+    "dev:erp:local": "npm run dev --workspace @andavalle/erp -- --mode localdb",
+    "local:admin": "node scripts/create-local-admin.mjs",
+    "test:quotations:local": "node scripts/test-local-quotations.mjs",
+    "test:contracts:local": "node scripts/test-local-contracts.mjs",
+    "test:ss:local": "node scripts/test-local-ss.mjs",
+    "test:hs:local": "node scripts/test-local-hs.mjs",
+    "test:se:local": "node scripts/test-local-se.mjs",
+    "test:he:local": "node scripts/test-local-he.mjs",
+    "test:inventory:local": "node scripts/test-local-inventory.mjs",
+    "test:counts:local": "node scripts/test-local-counts.mjs",
+    "test:lifecycle:local": "node scripts/test-local-lifecycle.mjs",
+    "build": "npm run build --workspaces --if-present",
+    "check": "npm run check --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "build:site": "npm run build --workspace @andavalle/site",
+    "build:erp": "npm run build --workspace @andavalle/erp"
   },
-  "dependencies": {
-    "@supabase/supabase-js": "2.76.1",
-    "lucide-react": "0.468.0",
-    "react": "19.2.0",
-    "react-dom": "19.2.0"
-  },
-  "devDependencies": {
-    "@types/react": "19.2.2",
-    "@types/react-dom": "19.2.2",
-    "@vitejs/plugin-react": "5.0.4",
-    "typescript": "5.9.3",
-    "vite": "7.3.7",
-    "wrangler": "^4.151.3"
-  }
+  "engines": { "node": ">=22.12.0" }
 }
