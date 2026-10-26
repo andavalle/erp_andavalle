@@ -1,5 +1,9 @@
 project_id = "andavalle"
 
+[auth]
+site_url = "https://erp-andavalle.grupoandavalle.workers.dev"
+additional_redirect_urls = ["http://localhost:5174", "https://erp-andavalle.grupoandavalle.workers.dev"]
+
 [db.seed]
 enabled = true
 sql_paths = ["./seed.sql"]
